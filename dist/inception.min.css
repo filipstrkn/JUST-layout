@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700");
+html {
+  font-family: "'Fira Sans'",sans-serif;
+  box-sizing: border-box
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0
+}
+
+ul {
+  list-style: none
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0
+}
+
+* {
+  box-sizing: inherit
+}
+
+*:before,
+*:after {
+  box-sizing: inherit
+}
+
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 0.3em
+}
+
+h1 {
+  font-size: 3rem
+}
+
+h2 {
+  font-size: 2.6rem
+}
+
+h3 {
+  font-size: 2rem
+}
+
+h4 {
+  font-size: 1.6rem
+}
+
+h5 {
+  font-size: 1.2rem
+}
+
+h6 {
+  font-size: 1rem
+}
+
+.columns {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+.columns .are-centered {
+  justify-content: center
+}
+
+.columns .are-aligned-left {
+  justify-content: flex-start
+}
+
+.columns .are-aligned-right {
+  justify-content: flex-end
+}
+
+.columns .are-vertical {
+  flex-direction: column
+}
+
+.columns .are-horizontal {
+  flex-direction: row
+}
+
+.columns.with-small-gaps > .column {
+  padding: 8px 8px  !important
+}
+
+.columns.with-medium-gaps > .column {
+  padding: 10px 10px  !important
+}
+
+.columns.with-large-gaps > .column {
+  padding: 20px 20px  !important
+}
+
+.columns.with-horizontal-medium-gaps > .column {
+  padding: 0 10px
+}
+
+.columns.with-horizontal-medium-gaps > .column:first-of-type {
+  padding-left: 0 !important
+}
+
+.columns.with-horizontal-medium-gaps > .column:last-of-type {
+  padding-right: 0 !important
+}
+
+.columns.with-vertical-medium-gaps > .column {
+  padding: 10px 0
+}
+
+.columns.with-vertical-medium-gaps > .column:first-of-type {
+  padding-top: 0 !important;
+  padding-top: 20px !important
+}
+
+.columns.with-vertical-medium-gaps > .column:last-of-type {
+  padding-bottom: 0 !important;
+  padding-top: 20px !important
+}
+
+.columns.with-vertical-large-gaps > .column {
+  padding: 20px 0
+}
+
+.columns.with-vertical-large-gaps > .column:first-of-type {
+  padding-top: 0 !important;
+  padding-top: 20px !important
+}
+
+.columns.with-vertical-large-gaps > .column:last-of-type {
+  padding-bottom: 0 !important;
+  padding-top: 20px !important
+}
+
+.columns .column {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  margin: 0 0  !important;
+  box-sizing: border-box !important
+}
+
+.columns .column.is-one-sixth {
+  flex: none !important;
+  width: 16.6666%
+}
+
+.columns .column.is-one-third {
+  flex: none !important;
+  width: 33.3333%
+}
+
+.columns .column.is-quarter {
+  flex: none !important;
+  width: 25%
+}
+
+.columns .column.is-half {
+  flex: none !important;
+  width: 50%
+}
+
+.columns .column.is-two-thirds {
+  flex: none !important;
+  width: 66.6666%
+}
+
+.columns .column.is-full {
+  flex: none !important;
+  width: 100%
+}

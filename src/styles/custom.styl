@@ -1,0 +1,45 @@
+// colors
+$blue = #06b2ff
+$dodge = #0032FF
+$blue-zodiac = #3D3F46 
+$zodiac = #1c1c1f
+$ghost = #CECECF 
+$blue-light = #dceeff
+$grey = #f8f9fa
+
+
+html, body
+    font-weight: 300
+    background-color: $dodge
+    // color: $blue-light
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 3em
+    .logo
+        max-width: 3em
+.grid,
+.icons,
+.text
+    float: right
+    width: calc(100% - 9em)
+
+.icons
+    margin: 4em 0
+    padding: 2em
+    background-color: #ffffff
+
+.text
+    margin: 10em 0
+    padding: 2em
+
+.c
+    height 20em
+    background-color: alpha(#000000, .08)
+    transition: background-color .5s ease-out
+    &:hover
+        background-color: alpha(#000000, .2)
+

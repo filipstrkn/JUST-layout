@@ -1,0 +1,89 @@
+$base-width = (100 / 12)
+
+.columns
+    margin: 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+    .are-centered
+        justify-content: center
+
+    .are-aligned-left
+        justify-content: flex-start
+    
+    .are-aligned-right
+        justify-content: flex-end
+    
+    .are-vertical
+        flex-direction: column
+    
+    .are-horizontal
+        flex-direction: row
+
+    &.with-small-gaps
+        & > .column
+            padding: 8px !important
+    &.with-medium-gaps
+        & > .column
+            padding: 10px !important
+    &.with-large-gaps
+        & > .column
+            padding: 20px !important
+
+    &.with-horizontal-medium-gaps
+        & > .column
+            padding: 0 10px
+            &:first-of-type
+                padding-left: 0 !important
+            &:last-of-type
+                padding-right: 0 !important
+    
+    &.with-vertical-medium-gaps
+        & > .column
+            padding: 10px 0
+            &:first-of-type
+                padding-top: 0 !important
+                padding-top: 20px !important
+            &:last-of-type
+                padding-bottom: 0 !important
+                padding-top: 20px !important
+    
+    &.with-vertical-large-gaps
+        & > .column
+            padding: 20px 0
+            &:first-of-type
+                padding-top: 0 !important
+                padding-top: 20px !important
+            &:last-of-type
+                padding-bottom: 0 !important
+                padding-top: 20px !important
+
+    .column
+        display: block
+        flex-grow: 1
+        flex-shrink: 1
+        flex-basis: 0
+        margin: 0 !important
+        box-sizing: border-box !important
+
+        // SIZES
+        &.is-one-sixth
+            flex: none !important
+            width: 16.6666%
+        &.is-one-third
+            flex: none !important
+            width: 33.3333%
+        &.is-quarter
+            flex: none !important
+            width: 25%
+        &.is-half
+            flex: none !important
+            width: 50%
+        &.is-two-thirds
+            flex: none !important
+            width: 66.6666%
+        &.is-full
+            flex: none !important
+            width: 100%
