@@ -74,42 +74,6 @@ th {
   text-align: left
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-  margin-top: 0.2em;
-  margin-bottom: 0.3em
-}
-
-h1 {
-  font-size: 3rem
-}
-
-h2 {
-  font-size: 2.6rem
-}
-
-h3 {
-  font-size: 2rem
-}
-
-h4 {
-  font-size: 1.6rem
-}
-
-h5 {
-  font-size: 1.2rem
-}
-
-h6 {
-  font-size: 1rem
-}
-
 .columns {
   margin: 0;
   padding: 0;
@@ -118,36 +82,28 @@ h6 {
   width: 100%
 }
 
-.columns .are-centered {
+.columns.are-centered {
   justify-content: center
 }
 
-.columns .are-aligned-left {
-  justify-content: flex-start
-}
-
-.columns .are-aligned-right {
-  justify-content: flex-end
-}
-
-.columns .are-vertical {
+.columns.are-vertical {
   flex-direction: column
 }
 
-.columns .are-horizontal {
+.columns.are-horizontal {
   flex-direction: row
 }
 
 .columns.with-small-gaps > .column {
-  padding: 8px 8px  !important
+  padding: 0.2rem 0.2rem  !important
 }
 
 .columns.with-medium-gaps > .column {
-  padding: 10px 10px  !important
+  padding: 0.6rem 0.6rem  !important
 }
 
 .columns.with-large-gaps > .column {
-  padding: 20px 20px  !important
+  padding: 1rem 1rem  !important
 }
 
 .columns.with-horizontal-medium-gaps > .column {
@@ -162,18 +118,28 @@ h6 {
   padding-right: 0 !important
 }
 
+.columns.with-vertical-small-gaps > .column {
+  padding: 0.2rem 0
+}
+
+.columns.with-vertical-small-gaps > .column:first-of-type {
+  padding-top: 0 !important
+}
+
+.columns.with-vertical-small-gaps > .column:last-of-type {
+  padding-bottom: 0 !important
+}
+
 .columns.with-vertical-medium-gaps > .column {
-  padding: 10px 0
+  padding: 0.6rem 0
 }
 
 .columns.with-vertical-medium-gaps > .column:first-of-type {
-  padding-top: 0 !important;
-  padding-top: 20px !important
+  padding-top: 0 !important
 }
 
 .columns.with-vertical-medium-gaps > .column:last-of-type {
-  padding-bottom: 0 !important;
-  padding-top: 20px !important
+  padding-bottom: 0 !important
 }
 
 .columns.with-vertical-large-gaps > .column {
@@ -227,4 +193,11 @@ h6 {
 .columns .column.is-full {
   flex: none !important;
   width: 100%
+}
+
+.columns .column.is-sidebar {
+  flex: none !important;
+  width: 33.3333%;
+  max-width: 20rem;
+  min-width: 20rem
 }

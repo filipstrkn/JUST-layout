@@ -1,4 +1,7 @@
 $base-width = (100 / 12)
+$gap-small = 0.2rem
+$gap-medium = 0.6rem
+$gap-large = 1rem
 
 .columns
     margin: 0
@@ -6,31 +9,25 @@ $base-width = (100 / 12)
     display: flex
     flex-wrap: wrap
     width: 100%
-
-    .are-centered
+    
+    &.are-centered
         justify-content: center
-
-    .are-aligned-left
-        justify-content: flex-start
     
-    .are-aligned-right
-        justify-content: flex-end
-    
-    .are-vertical
+    &.are-vertical
         flex-direction: column
     
-    .are-horizontal
+    &.are-horizontal
         flex-direction: row
 
     &.with-small-gaps
         & > .column
-            padding: 8px !important
+            padding: $gap-small !important
     &.with-medium-gaps
         & > .column
-            padding: 10px !important
+            padding: $gap-medium !important
     &.with-large-gaps
         & > .column
-            padding: 20px !important
+            padding: $gap-large !important
 
     &.with-horizontal-medium-gaps
         & > .column
@@ -40,15 +37,21 @@ $base-width = (100 / 12)
             &:last-of-type
                 padding-right: 0 !important
     
-    &.with-vertical-medium-gaps
+    &.with-vertical-small-gaps
         & > .column
-            padding: 10px 0
+            padding: $gap-small 0
             &:first-of-type
                 padding-top: 0 !important
-                padding-top: 20px !important
             &:last-of-type
                 padding-bottom: 0 !important
-                padding-top: 20px !important
+
+    &.with-vertical-medium-gaps
+        & > .column
+            padding: $gap-medium 0
+            &:first-of-type
+                padding-top: 0 !important
+            &:last-of-type
+                padding-bottom: 0 !important
     
     &.with-vertical-large-gaps
         & > .column
@@ -87,3 +90,10 @@ $base-width = (100 / 12)
         &.is-full
             flex: none !important
             width: 100%
+
+        // SPECIAL SIZES
+        &.is-sidebar
+            flex: none !important
+            width: 33.3333%
+            max-width: 20rem
+            min-width 20rem
