@@ -195,3 +195,11 @@ JUST layout takes advantage of css flex layouts.
 
 
 ```
+
+# Browser Support
+Just layouts uses flexbox and autoprefixer for browser compatibility.
+- Chrome
+- Firefox
+- Safari
+- Opera
+- IE ^10
