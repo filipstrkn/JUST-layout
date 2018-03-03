@@ -50,7 +50,7 @@ gulp.task('styles', () => {
         .pipe(purge({
             trim : true,
             shorten: true,
-            css_output: './dist/just-layout.min.css'
+            css_output: './css/just-layout.min.css'
         }))
 })
 

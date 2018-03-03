@@ -2,7 +2,7 @@
   "name": "just-layout",
   "version": "0.1.0",
   "description": "CSS library for building layouts",
-  "main": "dist/just-layout.min.css",
+  "main": "css/just-layout.min.css",
   "scripts": {
     "start": "gulp",
     "build": "gulp styles"
