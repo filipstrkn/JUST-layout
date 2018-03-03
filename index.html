@@ -4,94 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JUST.</title>
-    <link rel="stylesheet" href="./dist/inception.min.css">
-    <link rel="stylesheet" href="./dist/custom.min.css">
+    <title>Testing layout options</title>
+    <link rel="stylesheet" href="./dist/just-layout.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        .c {
+            min-height: 20vw;
+            background-color: #fff;
+            transition: box-shadow .5s ease-out;
+            border-radius: 8px;
+            border: solid 1px rgba(0,0,0,0);
+            box-shadow: 0 2px 3px rgba(0,0,0,.1);
+        }
+        .c:hover {
+            box-shadow: 0 5px 6px rgba(0,0,0,.16);
+        }
+    </style>
 </head>
 <body>
-
-    <header class="header">
-        <div class="logo">
-            <img src="/public/logo.svg" alt="">
+    <div class="columns with-gaps--medium on-mobile-md">
+        <div class="is-one-third column">
+            <div class="c"></div>
         </div>
-    </header>
-
-
-
-
-    <section class="text">
-        <h3>JUST layout.</h3>
-        <p style="width: 26em; margin: 2em 0;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque nam cum animi dolore ducimus, at assumenda dolorem dolores, et inventore nihil repellat quisquam cumque, distinctio cupiditate aperiam molestiae itaque ratione.</p>
-        <div class="code">bower install just-layout</div>
-    </section>
-
-
-
-    <section class="grid">
-        <div class="columns with-medium-gaps">
-            <div class="column is-one-third offset-one-third">
-                <div class="c"></div>
-            </div>
-            <div class="column is-one-third offset-one-third">
-                <div class="c"></div>
-            </div>
-            <div class="column is-one-third offset-one-third">
-                <div class="c"></div>
-            </div>
+        <div class="is-one-third column">
+            <div class="c"></div>
         </div>
-        <div class="columns with-medium-gaps">
-            <div class="column is-half">
-                <div class="c"></div>
-            </div>
-            <div class="column is-half">
-                <div class="c"></div>
-            </div>
+        <div class="is-one-third column">
+            <div class="c"></div>
         </div>
-        <div class="columns with-medium-gaps">
-            <div class="column is-two-third">
-                <div class="c"></div>
-            </div>
-            <div class="column is-one-third">
-                <div class="c"></div>
-            </div>
+        <div class="column">
+            <div class="c"></div>
         </div>
+        <div class="column">
+            <div class="c"></div>
+        </div>
+    </div>
 
-        <div class="columns with-medium-gaps">
-            <div class="column is-half">
-                <div class="c" style="height:100%"></div>
-            </div>
-            <div class="column is-half">
-                <div class="columns with-horizontal-medium-gaps">
-                    <div class="column">
-                        <div class="c"></div>
-                    </div>
-                    <div class="column">
-                        <div class="c"></div>
-                    </div>
+
+    <div class="columns with-gaps--medium on-mobile-md">
+        <div class="column is-one-third">
+            <div class="c" style="height: 100%;"></div>
+        </div>
+        <div class="column">
+            <div class="columns are-vertical with-y-gaps--medium">
+                <div class="column">
+                    <div class="c"></div>
                 </div>
-                <div class="columns with-vertical-medium-gaps">
-                    <div class="column">
-                        <div class="c"></div>
-                    </div>
+                <div class="column">
+                    <div class="c"></div>
+                </div>  
+                <div class="column">
+                    <div class="c"></div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="columns with-gaps--medium on-mobile-md">
+        <div class="column">
+            <div class="c" style="height: 100%;"></div>
+        </div>
+        <div class="column columns with-y-gaps--medium are-vertical">
+            <div class="column columns with-x-gaps--medium on-mobile-lg">
+                <div class="column">
+                    <div class="c"></div>
+                </div>
+                <div class="column">
+                    <div class="c"></div>
+                </div>
+                <div class="column">
+                    <div class="c"></div>
                 </div>
             </div>
+            <div class="column columns are-vertical with-y-gaps--medium on-mobile-md">
+                <div class="column">
+                    <div class="c"></div>
+                </div>
+                <div class="column">
+                    <div class="c"></div>
+                </div>
+            </div>
+            <div class="column columns with-y-gaps--medium">
+                <div class="column">
+                    <div class="columns with-x-gaps--medium on-mobile-sm">
+                        <div class="column">
+                            <div class="c"></div>
+                        </div>
+                        <div class="column">
+                            <div class="c"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-
-
-
-  
-      
-
-    <section class="text">
-        <h3>JUST glyphs</h3>
-        <div class="code">bower install just-glyphs</div>
-    </section>
-
-    <section class="icons">
-
-    </section>
-
-    
+    </div>
 </body>
 </html>

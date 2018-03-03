@@ -1,25 +1,38 @@
-// ================================
-//              COLORS
-// ================================
+/*
+|==============================================================================
+| General sizes
+|==============================================================================
+| 'columns' is a master class that allows to use its child class 'column'.
+| Columns contains modifiers for setting up positons of its columns
+| or column's gaps and their direction. For responsive behavior
+| there is a modifier called 'on-mobile-[size]'.
+|------------------------------------------------------------------------------
+*/
+$base-width = (100 / 12)
+$gap-small = 0.2rem
+$gap-medium = 0.6rem
+$gap-large = 1rem
 
 
 
-// ================================
-//              SIZES
-// ================================
-$sizes = ($size-1 $size-2 $size-3 $size-4 $size-5 $size-6)
-
-$size-1 = 3rem
-$size-2 = 2.6rem
-$size-3 = 2rem
-$size-4 = 1.6rem
-$size-5 = 1.2rem
-$size-6 = 1rem
 
 
-// ================================
-//              FONTS
-// ================================
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700")
 
-$font-primary = 'Fira Sans', sans-serif
+
+
+
+
+/*
+|==============================================================================
+| Screen sizes
+|==============================================================================
+| 'columns' is a master class that allows to use its child class 'column'.
+| Columns contains modifiers for setting up positons of its columns
+| or column's gaps and their direction. For responsive behavior
+| there is a modifier called 'on-mobile-[size]'.
+|------------------------------------------------------------------------------
+*/
+$screens = ($screen-1 $screen-2 $screen-3)
+$screen-1 = {screen: 320px, name: 'on-mobile--small'}
+$screen-2 = {screen: 480px, name: 'on-mobile--medium'}
+$screen-3 = {screen: 768px, name: 'on-mobile--large'}

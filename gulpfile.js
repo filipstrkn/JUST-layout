@@ -2,34 +2,77 @@ const gulp = require('gulp')
 const purge = require('gulp-css-purge')
 const server = require('gulp-server-io')
 const stylus = require('gulp-stylus')
+const autoprefixer = require('gulp-autoprefixer')
 const __stylename = './src/styles/**/*.styl'
 
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Testing server
+|--------------------------------------------------------------------------
+*/
 gulp.task('server', () => {
     return gulp.src('./').pipe(server({ development: true, open: false }))
 })
 
-gulp.task('custom', () => {
-    return gulp.src('./src/styles/custom.styl')
-        .pipe(stylus())
-        .pipe(purge({
-            trim : true,
-            verbose: true,
-            css_output: './dist/custom.min.css'
-        }))
-})
 
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Styles
+|--------------------------------------------------------------------------
+| just build the styles
+| > npm run build
+|--------------------------------------------------------------------------
+*/
 gulp.task('styles', () => {
     return gulp.src('./src/styles/main.styl')
         .pipe(stylus())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(purge({
-            trim : false,
-            verbose: false,
-            trim_whitespace: false,
-            trim_breaklines: false,
-            css_output: './dist/inception.min.css'
+            trim : true,
+            shorten: true,
+            css_output: './dist/just-layout.min.css'
         }))
 })
 
+
+
+
+
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Run server and watch for changes
+|--------------------------------------------------------------------------
+| simply hook '/dist/just-layout.min.css' into your html file
+| and run the server
+| > npm start
+|--------------------------------------------------------------------------
+*/
 gulp.task('default', ['server'], () => {
     gulp.watch([__stylename], ['styles', 'custom'])
  })

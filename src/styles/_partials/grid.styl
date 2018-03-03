@@ -1,15 +1,37 @@
-$base-width = (100 / 12)
-$gap-small = 0.2rem
-$gap-medium = 0.6rem
-$gap-large = 1rem
-
+/*
+|==============================================================================
+| Columns
+|==============================================================================
+| 'columns' is a master class that allows to use its child class 'column'.
+| Columns contains modifiers for setting up positons of its columns
+| or column's gaps and their direction. For responsive behavior
+| there is a modifier called 'on-mobile-[size]'.
+|------------------------------------------------------------------------------
+*/
 .columns
+    display: flex !important
+    flex-wrap: wrap
     margin: 0
     padding: 0
-    display: flex
-    flex-wrap: wrap
     width: 100%
-    
+
+
+
+
+
+
+
+
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Positioning
+    |--------------------------------------------------------------------------
+    | Columns can be positioned horizontaly as a row,
+    | verticaly as a column or horizontaly centered.
+    |--------------------------------------------------------------------------
+    */
     &.are-centered
         justify-content: center
     
@@ -19,81 +41,138 @@ $gap-large = 1rem
     &.are-horizontal
         flex-direction: row
 
-    &.with-small-gaps
-        & > .column
-            padding: $gap-small !important
-    &.with-medium-gaps
-        & > .column
-            padding: $gap-medium !important
-    &.with-large-gaps
-        & > .column
-            padding: $gap-large !important
 
-    &.with-horizontal-medium-gaps
+
+
+
+
+
+
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Gaps
+    |--------------------------------------------------------------------------
+    | Columns can contain gaps that are defined on the 'columns' class.
+    | Gaps can go horizontaly, verticaly or to every direction.
+    | There are three size options for every gap unit.
+    |--------------------------------------------------------------------------
+    */
+    &.with-gaps--small
         & > .column
-            padding: 0 10px
+            padding: $gap-small
+    &.with-gaps--medium
+        & > .column
+            padding: $gap-medium
+    &.with-gaps--large
+        & > .column
+            padding: $gap-large
+
+    &.with-x-gaps--small,
+    &.with-x-gaps--medium,
+    &.with-x-gaps--large
+        & > .column
             &:first-of-type
                 padding-left: 0 !important
             &:last-of-type
                 padding-right: 0 !important
+
+    &.with-x-gaps--small
+        & > .column
+            padding: 0 $gap-small
+
+    &.with-x-gaps--medium
+        & > .column
+            padding: 0 $gap-medium
+        
+    &.with-x-gaps--large
+        & > .column
+            padding: 0 $gap-large
+        
+    &.with-y-gaps--small,
+    &.with-y-gaps--medium,
+    &.with-y-gaps--large
+        & > .column
+            &:first-of-type
+                padding-top: 0 !important
+            &:last-of-type
+                padding-bottom: 0 !important
     
-    &.with-vertical-small-gaps
+    &.with-y-gaps--small
         & > .column
             padding: $gap-small 0
-            &:first-of-type
-                padding-top: 0 !important
-            &:last-of-type
-                padding-bottom: 0 !important
 
-    &.with-vertical-medium-gaps
+    &.with-y-gaps--medium
         & > .column
-            padding: $gap-medium 0
-            &:first-of-type
-                padding-top: 0 !important
-            &:last-of-type
-                padding-bottom: 0 !important
-    
-    &.with-vertical-large-gaps
-        & > .column
-            padding: 20px 0
-            &:first-of-type
-                padding-top: 0 !important
-                padding-top: 20px !important
-            &:last-of-type
-                padding-bottom: 0 !important
-                padding-top: 20px !important
+            padding: $gap-medium 0   
 
+    &.with-y-gaps--large
+        & > .column
+            padding: $gap-large 0
+
+
+
+
+
+
+
+
+
+
+    /*
+    |==========================================================================
+    | Column
+    |==========================================================================
+    | Each column has options for defining its width via
+    | modifiers. Column also can become a container
+    | of columns by adding the .columns class.
+    |--------------------------------------------------------------------------
+    */
     .column
         display: block
         flex-grow: 1
         flex-shrink: 1
         flex-basis: 0
-        margin: 0 !important
-        box-sizing: border-box !important
+        margin: 0
+        box-sizing: border-box
 
-        // SIZES
+        &[class*="is-"]
+            flex: none !important
+
+
+
+
+
+
+
+
+
+
+        /*
+        |----------------------------------------------------------------------
+        | Column sizes
+        |----------------------------------------------------------------------
+        | Sizes are a modifiers of Column class. Without defining size
+        | columns are going to have a flexible with that spreads
+        | automaticaly. If width is defined using modifier
+        | grid will collapse when border is reached.
+        |----------------------------------------------------------------------
+        */
         &.is-one-sixth
-            flex: none !important
             width: 16.6666%
-        &.is-one-third
-            flex: none !important
-            width: 33.3333%
-        &.is-quarter
-            flex: none !important
-            width: 25%
-        &.is-half
-            flex: none !important
-            width: 50%
-        &.is-two-thirds
-            flex: none !important
-            width: 66.6666%
-        &.is-full
-            flex: none !important
-            width: 100%
 
-        // SPECIAL SIZES
-        &.is-sidebar
-            flex: none !important
+        &.is-one-third
             width: 33.3333%
-            max-width: 20rem
-            min-width 20rem
+
+        &.is-one-quarter
+            width: 25%
+
+        &.is-half
+            width: 50%
+
+        &.is-two-thirds
+            width: 66.6666%
+
+        &.is-full
+            width: 100%

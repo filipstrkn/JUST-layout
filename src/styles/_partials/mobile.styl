@@ -1,0 +1,34 @@
+/*
+|==============================================================================
+| Mobile modifier
+|==============================================================================
+| This modifier belong for the master class 'columns'.
+|------------------------------------------------------------------------------
+*/
+for $screen, i in $screens
+    .{$screen[name]}
+        @media screen and (max-width: $screen[screen])
+            flex-direction: column !important
+            .column
+                width: 100% !important
+
+            &.with-x-gaps--small,
+            &.with-x-gaps--medium,
+            &.with-x-gaps--large
+                & > .column
+                    &:first-of-type
+                        padding-top: 0 !important
+                    &:last-of-type
+                        padding-bottom: 0 !important
+
+            &.with-x-gaps--small
+                & > .column
+                    padding: $gap-small 0
+
+            &.with-x-gaps--medium
+                & > .column
+                    padding: $gap-medium 0
+
+            &.with-x-gaps--large
+                & > .column
+                    padding: $gap-large 0

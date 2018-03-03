@@ -1,6 +1,20 @@
-# JUST layout
+
+![alt text](/public/just-layout.png)
+
+<p align="center">
+    A tiny css library for building layouts without hassle.
+</p>
+
+### Content
+- [Quick Install](#quick-install)
+- [Documentation](#documentation)
 
 
-JUST layout is a very minimal css library that helps you to start a project without worrying about layout. JUST uses CSS flexbox and a very expressive language.
+# Quick Install
 
-<a href="">- Get Visual -</a>
+feel free to install JUST layout via Bower
+```
+bower install just-layout
+```
+
+# Documentation
