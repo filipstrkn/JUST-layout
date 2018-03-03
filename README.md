@@ -5,7 +5,7 @@
     A tiny css library for building layouts without hassle.
 </p>
 <p align="center">
-    <a hfre="https://filipstrkn.github.io/JUST-layout/">Get visual</a>
+    <a href="https://filipstrkn.github.io/JUST-layout/">-- Get visual --</a>
 </p>
 
 ### Content
