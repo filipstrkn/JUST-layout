@@ -4,6 +4,9 @@
 <p align="center">
     A tiny css library for building layouts without hassle.
 </p>
+<p align="center">
+    <a hfre="https://filipstrkn.github.io/JUST-layout/">Get visual</a>
+</p>
 
 ### Content
 - [Quick Install](#quick-install)
@@ -25,7 +28,8 @@ JUST layout takes advantage of css flex layouts.
 .columns
 /* 
 |
-|    is a Master class that defines flexible layout. It owns modifiers to
+|   is a Master class that defines flexible layout. It owns specific modifiers
+|   which helps to add features such are gaps, positioning or responsivness.
 |
 */
 
