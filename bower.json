@@ -1,0 +1,27 @@
+{
+  "name": "just-layout",
+  "description": "CSS library for building layouts",
+  "main": "dist/just-layout.min.css",
+  "authors": [
+    "filip strkn"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "flexbox",
+    "layout"
+  ],
+  "homepage": "https://github.com/filipstrkn/JUST-layout",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "public",
+    ".gitignore",
+    "gulpfile.js",
+    "index.html"
+  ]
+}
