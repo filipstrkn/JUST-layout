@@ -74,5 +74,5 @@ gulp.task('styles', () => {
 |--------------------------------------------------------------------------
 */
 gulp.task('default', ['server'], () => {
-    gulp.watch([__stylename], ['styles', 'custom'])
+    gulp.watch([__stylename], ['styles'])
  })
